@@ -3,7 +3,7 @@ package pplx
 // ChatCompletionOpts encapsulates the options provided by API.
 type ChatCompletionOpts struct {
 	// The name of the model that will complete your prompt
-	Model string
+	Model ModelType
 	// A list of messages comprising the conversation so far.
 	Messages []ChatMessage `validate:"required"`
 	// The maximum number of completion tokens returned by the API.

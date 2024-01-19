@@ -111,11 +111,11 @@ func newChatCompletionRequest(opts ChatCompletionOpts) (*ChatCompletionRequest, 
 
 	if opts.Model == "" {
 		// Set the default to mistral-7b-instruct
-		opts.Model = string(Mistral7BInstruct)
+		opts.Model = Mistral7BInstruct
 	}
 
 	return &ChatCompletionRequest{
-		Model:            ModelType(opts.Model),
+		Model:            opts.Model,
 		Messages:         opts.Messages,
 		MaxTokens:        opts.MaxTokens,
 		Temperature:      opts.Temperature,
